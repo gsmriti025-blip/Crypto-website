@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Crypto Dashboard</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="js.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">₿</span>
+        <span>Crypto<span class="logo-highlight">Dash</span></span>
+      </div>
+
+      <nav class="navbar">
+        <a href="#dashboard">Dashboard</a>
+        <a href="#markets">Markets</a>
+        <a href="#favorites">Favorites</a>
+      </nav>
+
+      <button class="theme-btn" id="themeBtn">🌙</button>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="container" id="dashboard">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-text">
+          <p class="small-title">CRYPTOCURRENCY MARKET</p>
+
+          <h1>
+            Track Crypto
+            <span>Prices</span>
+          </h1>
+
+          <p class="hero-description">
+            Monitor cryptocurrency prices, market caps, price changes and market
+            trends in real time.
+          </p>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="search-area">
+          <div class="search-box">
+            <span>🔍</span>
+
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search cryptocurrency..."
+            />
+
+            <button id="searchBtn">Search</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= TOP COINS ================= -->
+
+      <section class="top-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">MARKET OVERVIEW</p>
+            <h2>Top Cryptocurrencies</h2>
+          </div>
+
+          <button class="view-all-btn">View All →</button>
+        </div>
+
+        <div class="crypto-cards" id="cryptoCards">
+          <!-- BITCOIN -->
+
+          <div class="crypto-card">
+            <div class="coin-header">
+              <div class="coin-info">
+                <div class="coin-image bitcoin">₿</div>
+
+                <div>
+                  <h3>Bitcoin</h3>
+                  <p>BTC</p>
+                </div>
+              </div>
+
+              <span class="star">☆</span>
+            </div>
+
+            <div class="coin-price">
+              <h2>$--</h2>
+              <span class="positive">+--%</span>
+            </div>
+
+            <div class="mini-chart">
+              <div class="chart-line"></div>
+            </div>
+
+            <div class="coin-footer">
+              <span>Market Cap</span>
+              <strong>$--</strong>
+            </div>
+          </div>
+
+          <!-- ETHEREUM -->
+
+          <div class="crypto-card">
+            <div class="coin-header">
+              <div class="coin-info">
+                <div class="coin-image ethereum">Ξ</div>
+
+                <div>
+                  <h3>Ethereum</h3>
+                  <p>ETH</p>
+                </div>
+              </div>
+
+              <span class="star">☆</span>
+            </div>
+
+            <div class="coin-price">
+              <h2>$--</h2>
+              <span class="negative">--%</span>
+            </div>
+
+            <div class="mini-chart">
+              <div class="chart-line"></div>
+            </div>
+
+            <div class="coin-footer">
+              <span>Market Cap</span>
+              <strong>$--</strong>
+            </div>
+          </div>
+
+          <!-- SOLANA -->
+
+          <div class="crypto-card">
+            <div class="coin-header">
+              <div class="coin-info">
+                <div class="coin-image solana">S</div>
+
+                <div>
+                  <h3>Solana</h3>
+                  <p>SOL</p>
+                </div>
+              </div>
+
+              <span class="star">☆</span>
+            </div>
+
+            <div class="coin-price">
+              <h2>$--</h2>
+              <span class="positive">+--%</span>
+            </div>
+
+            <div class="mini-chart">
+              <div class="chart-line"></div>
+            </div>
+
+            <div class="coin-footer">
+              <span>Market Cap</span>
+              <strong>$--</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= MARKET TABLE ================= -->
+
+      <section class="market-section" id="markets">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">CRYPTO MARKET</p>
+            <h2>Market Data</h2>
+          </div>
+        </div>
+
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Coin</th>
+                <th>Price</th>
+                <th>24h Change</th>
+                <th>24h Volume</th>
+                <th>Market Cap</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody id="cryptoTable">
+              <tr>
+                <td>1</td>
+
+                <td>
+                  <div class="table-coin">
+                    <div class="table-icon">₿</div>
+
+                    <div>
+                      <strong>Bitcoin</strong>
+                      <span>BTC</span>
+                    </div>
+                  </div>
+                </td>
+
+                <td>$--</td>
+
+                <td>
+                  <span class="positive">+--%</span>
+                </td>
+
+                <td>$--</td>
+
+                <td>$--</td>
+
+                <td>
+                  <button class="details-btn">Details</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>2</td>
+
+                <td>
+                  <div class="table-coin">
+                    <div class="table-icon">Ξ</div>
+
+                    <div>
+                      <strong>Ethereum</strong>
+                      <span>ETH</span>
+                    </div>
+                  </div>
+                </td>
+
+                <td>$--</td>
+
+                <td>
+                  <span class="negative">--%</span>
+                </td>
+
+                <td>$--</td>
+
+                <td>$--</td>
+
+                <td>
+                  <button class="details-btn">Details</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= CHART ================= -->
+
+      <section class="chart-section">
+        <div class="chart-header">
+          <div>
+            <p class="section-label">PRICE ANALYSIS</p>
+
+            <h2>Bitcoin Price Chart</h2>
+
+            <p class="chart-price">$--</p>
+          </div>
+
+          <div class="time-buttons">
+            <button>24H</button>
+            <button class="active">7D</button>
+            <button>30D</button>
+            <button>1Y</button>
+          </div>
+        </div>
+
+        <div class="chart-container">
+          <div class="fake-chart">
+            <div class="chart-grid"></div>
+
+            <svg viewBox="0 0 1000 300" preserveAspectRatio="none">
+              <polyline
+                points="
+                            0,230
+                            80,200
+                            150,220
+                            220,160
+                            300,190
+                            380,120
+                            450,150
+                            530,90
+                            610,130
+                            680,70
+                            750,110
+                            820,60
+                            900,90
+                            1000,35
+                            "
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= FAVORITES ================= -->
+
+      <section class="favorites-section" id="favorites">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">YOUR COLLECTION</p>
+            <h2>Favorite Coins</h2>
+          </div>
+        </div>
+
+        <div class="favorites-container" id="favoritesContainer">
+          <div class="empty-favorites">
+            <span>☆</span>
+
+            <h3>No Favorite Coins</h3>
+
+            <p>Add cryptocurrencies to your favorites to see them here.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+      <div class="footer-content">
+        <div class="logo">
+          <span class="logo-icon">₿</span>
+          Crypto<span class="logo-highlight">Dash</span>
+        </div>
+
+        <p>Cryptocurrency market dashboard.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 CryptoDash. Data powered by CoinGecko.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
